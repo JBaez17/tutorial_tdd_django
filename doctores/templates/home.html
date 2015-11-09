@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Control Hospital</title>
+    </head>
+
+    <body>
+        <h1>Nueva Lista Doctores</h1>
+        <form method="POST" action="/doctores/new">
+            <input name="item_text" id="id_new_item" placeholder="Ingresa el nombre del area" />
+            {% csrf_token %}
+        </form>
+    </body>
+</html>

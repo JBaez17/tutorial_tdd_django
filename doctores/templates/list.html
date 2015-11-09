@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Control Hospital</title>
+    </head>
+
+    <body>
+        <h1>Lista Doctores</h1>
+        <form method="POST" action="/doctores/{{ list.id }}/add_item">
+            <input name="item_text" id="id_new_item" placeholder="Ingresa el nombre del doctor" />
+            {% csrf_token %}
+        </form>
+
+        <table id="id_list_table">
+            {% for item in list.item_set.all %}
+                <tr><td>{{ forloop.counter }}: {{ item.text }}</td></tr>
+            {% endfor %}
+            <hr>
+        </table>
+
+    </body>
+</html>
